@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenidos a mi Presentacion</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <main id="pagina-principal" class="activo">
+    <section class="tarjeta-perfil">
+      <img src="imagenperfil.jpeg"  class="imagen-perfil" />
+      <h1>Meybilin Alexandra Aguilera Martinez</h1>
+      <p><strong>DNI:</strong>1804200800462</p>
+      <p><strong>Celular:</strong>+504 9685-3825</p>
+      <p><strong>Correo:</strong>alexandraaguilera@gmail.com</p>
+    </section>
+    <div class="centrado">
+      <button class="boton" onclick="mostrarFavoritos()">Ver favoritos</button>
+    </div>
+  </main>
+
+  <section id="pagina-favoritos" class="oculto">
+    <div class="centrado">
+      <button class="boton" onclick="volverInicio()">Volver</button>
+    </div>
+
+    <h2 class="titulo">Algunas cosas que me gustan</h2>
+
+    <h3 class="subtitulo">Colores favoritos</h3>
+    <div class="galeria">
+      <div class="item">
+        <img src="imagenlila.jpg" alt="Colo lila">
+        <p class="etiqueta">Lila</p>
+      </div>
+      <div class="item">
+        <img src="imagenazul.jpg" alt="Color azul pastel">
+        <p class="etiqueta">Azul Pastel</p>
+      </div>
+      <div class="item">
+        <img src="imagenrosa.jpg" alt="Color rosa pastel">
+        <p class="etiqueta">Rosado Pastel</p>
+      </div>
+    </div>
+
+    <h3 class="subtitulo">Comidas favoritas</h3>
+    <div class="galeria">
+      <div class="item">
+        <img src="imagenpizza.jpg" alt="Pizza">
+        <p class="etiqueta">Pizza</p>
+      </div>
+      <div class="item">
+        <img src="imagenhamburguesa.jpg" alt="Hamburguesa">
+        <p class="etiqueta">Hamburguesa</p>
+      </div>
+      <div class="item">
+        <img src="imagenbirria.jpg" alt="Tacos birria">
+        <p class="etiqueta">Tacos birria</p>
+      </div>
+    </div>
+
+    <h3 class="subtitulo">Deportes</h3>
+    <div class="galeria">
+      <div class="item">
+        <img src="imagendeporte.jpg" alt="Gym">
+      </div>
+      <div class="item">
+        <img src="imagendeporte2.jpg" alt="Gym">
+        <p class="etiqueta">Gym</p>
+      </div>
+      <div class="item">
+        <img src="imagendeporte3.jpg" alt="Gym">
+      </div>
+    </div>
+
+        <h3 class="subtitulo">Fotos Familia y Amigos</h3>
+    <div class="galeria">
+      <div class="item">
+        <img src="imagenfamilia1.jpeg" alt="Familia">
+        <p class="etiqueta">Familia</p>
+      </div>
+      <div class="item">
+        <img src="imagenamigos.jpeg" alt="Amigos">
+        <p class="etiqueta">Amigos</p>
+      </div>
+      <div class="item">
+        <img src="imagenfamilia2.jpeg" alt="Familia">
+        <p class="etiqueta">Familia</p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <script>
+    function mostrarFavoritos() {
+      document.getElementById('pagina-principal').classList.remove('activo');
+      document.getElementById('pagina-principal').classList.add('oculto');
+      document.getElementById('pagina-favoritos').classList.remove('oculto');
+    }
+
+    function volverInicio() {
+      document.getElementById('pagina-favoritos').classList.add('oculto');
+      document.getElementById('pagina-principal').classList.remove('oculto');
+      document.getElementById('pagina-principal').classList.add('activo');
+    }
+  </script>
+</body>
+</html>
+
